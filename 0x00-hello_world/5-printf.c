@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - A program that display  a sentence using the printf function
+ * main - A program that prints the size of various types on the computer it is compiled and run on.
  *
  * Return Always 0 (Succes)
  */
