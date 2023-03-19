@@ -1,0 +1,20 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * main - a program that prints letters in the alphabets in lowercase
+ *
+ * Return: 0 (success)
+ */
+int main(void)
+{
+	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
+
+	for (i = 0; i < 26; i++)
+	{
+		putchar(tolower(alphabet[i]));
+	}
+	putchar("\n");
+	return (0);
+}
