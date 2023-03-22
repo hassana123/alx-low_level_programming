@@ -24,15 +24,15 @@ int main(void)
 		after += before;
 		before = after - before;
 	}
-	before1 = (before / 1);
-	before2 = (before % 1);
-	after1 = (after / 1);
-	after2 = (after % 1);
+	before1 = (before / l);
+	before2 = (before % l);
+	after1 = (after / l);
+	after2 = (after % l);
 
 	for (i = 92; i < 99; ++i)
 	{
-		printf(", %lu", after1 + (after2 / 1));
-		printf("%lu", after2 % 1);
+		printf(", %lu", after1 + (after2 / l));
+		printf("%lu", after2 % l);
 		after1 = after1 + before1;
 		before1 = after1 - before1;
 		after2 = after2 + before2;
