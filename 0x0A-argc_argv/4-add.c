@@ -5,27 +5,6 @@
 #include <stdio.h>
 
 /**
- * checker - checks strings for digits
- * @s: string
- * Return: 0 (succs)
- */
-int checker(char *s)
-{
-	unsigned int count;
-
-	count = 0;
-	while (count < strlen(s))
-	{
-		if (!isdigit(s[count]))
-		{
-			return (0);
-		}
-		count++;
-	}
-	return (1);
-}
-
-/**
  * main - a program that adds positive numbers
  * @argc: num of args
  * @argv: array args
@@ -34,27 +13,31 @@ int checker(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int count;
-	int sti;
-	int sum;
+	int sum, j;
 
 	sum = 0;
-	count = 1;
-	while (count < argc)
+	if (argc > 1)
 	{
-		if (checker(argv[count]))
+		for (j = 1; j < argc; j++)
 		{
-			sti = _strtoint(argv[count]);
-			sum += sti;
+			int i;
+			char *str;
+
+			str = argv[j];
+			for (i = 0; str[i] != '\0'; i++)
+			{
+				if (str[i] < 48 || str[i] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-		count++;
+	}
+	for (j = 1; j < argc; j++)
+	{
+		sum += atoi(argv[j]);
 	}
 	printf("%d\n", sum);
-
 	return (0);
 }
