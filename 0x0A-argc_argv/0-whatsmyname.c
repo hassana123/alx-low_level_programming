@@ -10,8 +10,11 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
-	(void)argc;
+	char *name;
 
+	name = argv[0];
+	_putchar(name);
+	(void)argc;
+	
 	return (0);
 }
